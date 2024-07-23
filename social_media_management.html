@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Portfolio</a>
+                    <div class="dropdown-content">
+                        <a href="social_media_management.html">Social Media Management</a>
+                        <a href="content_creation.html">Content Creation</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="portfolio-item">
+            <h2>Portfolio Item 1</h2>
+            <p>Summary of the portfolio item.</p>
+            <button onclick="openPopup('popup1')">Learn More</button>
+        </section>
+        <!-- Add more portfolio items as needed -->
+    </main>
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('popup1')">&times;</span>
+            <h2>Portfolio Item 1</h2>
+            <p>More information about the portfolio item.</p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
