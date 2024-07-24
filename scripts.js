@@ -4,4 +4,5 @@ function openPopup(popupId) {
 
 function closePopup(popupId) {
     document.getElementById(popupId).style.display = "none";
+
 }
