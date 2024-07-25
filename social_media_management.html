@@ -8,10 +8,87 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        main {
+            padding: 80px 30px 80px 30px;
+        }
+
         nav {
             background-color: rgb(116, 185, 255);
             margin-top: -20px;
-            height: 50px;
+            height: 80px;
+        }
+
+        .smm {
+            font-size: xx-large;
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
+
+        .portfolio-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+        .portfolio-item img {
+            max-width: 200px;
+            margin: 50px 100px;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .portfolio-item-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .portfolio-item-content h2 {
+            margin: 0;
+        }
+
+        .portfolio-item-content p {
+            margin: 10px 0;
+        }
+
+        .popup_button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px 20px;
+            font-weight: 900;
+            color: white;
+            background-color: rgb(0, 128, 255);
+            border: 1px solid black;
+            border-radius: 5%;
+        }
+
+        @media (min-width: 800px) {
+            .popup_button {
+                margin-right: 30px;
+            }
+        }
+
+
+        @media (max-width: 800px) {
+            .portfolio-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .portfolio-item img {
+                align-self: center;
+            }
+
+            .popup_button {
+                align-self: center;
+                margin-bottom: 50px;
+            }
         }
     </style>
 </head>
@@ -34,32 +111,66 @@
         </nav>
     </header>
     <main>
-        <section class="portfolio-item">
-            <h2>Pet Paradise</h2>
-            <p>When joining Pet Paradise, I was brought on the team as an Animal Care Specialist. After six months with the company, our in-house Social Media Manager resigned. I was encouraged to apply, and this is where my journey with social media marketing began. Through the company's Instagram and Facebook, I began promoting our brand and highlighting the benefits of boarding your pet with Pet Paradise.</p>
-            <button onclick="openPopup('popup1')">Learn More</button>
+        <section>
+            <div>
+                <h1 class="smm">Social Media Management</h1>
+            </div>
         </section>
         <section class="portfolio-item">
-            <h2>Barstool Sports</h2>
-            <p>Working with Barstool gave me the confidence to scale social media accounts at a rapid rate. After creating my university's Barstool account on Instagram, I was able to grow the account from zero followers to over 30k in the first year of management.</p>
-            <button onclick="openPopup('popup1')">Learn More</button>
+            <div class="portfolio-item-content">
+                <h2>Pet Paradise</h2>
+                <p>When joining Pet Paradise, I was brought on the team as an Animal Care Specialist. After six months
+                    with the company, our in-house Social Media Manager resigned. I was encouraged to apply, and this is
+                    where my journey with social media marketing began. Through the company's Instagram and Facebook, I
+                    began promoting our brand and highlighting the benefits of boarding your pet with Pet Paradise.</p>
+            </div>
+            <img src="pet_logo.png">
+            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
         </section>
         <section class="portfolio-item">
-            <h2>Crystal Portal</h2>
-            <p>Crystal Portal was my first internship position as a Social Media Manager. As this local business had recently opened, I joined the team to increase our digital presence. This opportunity allowed me expand my skills primarily through product highlights and e-commerce outreach.</p>
-            <button onclick="openPopup('popup1')">Learn More</button>
+            <div class="portfolio-item-content">
+                <h2>Barstool Sports</h2>
+                <p>Working with Barstool gave me the confidence to scale social media accounts at a rapid rate. After
+                    creating my university's Barstool account on Instagram, I was able to grow the account from zero
+                    followers to over 30k in the first year of management.</p>
+            </div>
+            <img src="barstool_logo.png">
+            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
         </section>
         <section class="portfolio-item">
-            <h2>TLH Downtown</h2>
-            <p>Summary of the portfolio item.</p>
-            <button onclick="openPopup('popup1')">Learn More</button>
+            <div class="portfolio-item-content">
+                <h2>Crystal Portal</h2>
+                <p>Crystal Portal was my first internship position as a Social Media Manager. As this local business had
+                    recently opened, I joined the team to increase our digital presence. This opportunity allowed me
+                    expand my skills primarily through product highlights and e-commerce outreach.</p>
+            </div>
+            <img src="crystal_logo.png" class="circle">
+            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
         </section>
         <section class="portfolio-item">
-            <h2>Olde Fields Clothing</h2>
-            <p>Summary of the portfolio item.</p>
-            <button onclick="openPopup('popup1')">Learn More</button>
+            <div class="portfolio-item-content">
+                <h2>TLH Downtown</h2>
+                <p>Summary of the portfolio item.</p>
+            </div>
+            <img src="tlh_logo.png" class="circle">
+            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
         </section>
-        <!-- Add more portfolio items as needed -->
+        <section class="portfolio-item">
+            <div class="portfolio-item-content">
+                <h2>Olde Fields Clothing</h2>
+                <p>Summary of the portfolio item.</p>
+            </div>
+            <img src="olde_logo.png">
+            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
+        </section>
+        <section class="portfolio-item">
+            <div class="portfolio-item-content">
+                <h2>SkillStorm</h2>
+                <p>Summary of the portfolio item.</p>
+            </div>
+            <img src="skillstorm_logo.png">
+            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
+        </section>
     </main>
     <div id="popup1" class="popup">
         <div class="popup-content">
@@ -67,6 +178,9 @@
             <h2>Portfolio Item 1</h2>
             <p>More information about the portfolio item.</p>
         </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 GrowWithGrace LLC. All rights reserved.
     </div>
     <script src="scripts.js"></script>
 </body>
