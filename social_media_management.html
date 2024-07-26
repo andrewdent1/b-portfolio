@@ -1,4 +1,4 @@
-Paradise<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,10 +8,6 @@ Paradise<!DOCTYPE html>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        main {
-            padding: 80px 30px 80px 60px;
-        }
-
         nav {
             background-color: rgb(116, 185, 255);
             margin-top: -20px;
@@ -30,22 +26,15 @@ Paradise<!DOCTYPE html>
             align-items: center;
             justify-content: space-between;
             margin: 20px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-        }
-
-        .portfolio-item img {
-            max-width: 200px;
-            margin: 50px 100px;
-        }
-
-        .circle {
-            border-radius: 50%;
+            padding: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
         }
 
         .portfolio-item-content {
-            display: flex;
-            flex-direction: column;
             flex: 1;
+            min-width: 200px;
+            text-align: left;
         }
 
         .portfolio-item-content h2 {
@@ -56,47 +45,92 @@ Paradise<!DOCTYPE html>
             margin: 10px 0;
         }
 
+        .portfolio-item img {
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
         .popup_button {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             padding: 10px 20px;
             font-weight: 900;
-            color: white;
-            background-color: rgb(0, 128, 255);
+            color: black;
+            background-color: white;
             border: 1px solid black;
             border-radius: 5%;
+            cursor: pointer;
+            max-width: 200px;
+            margin: 10px auto 0;
+        }
+
+        .popup_button:hover {
+            background-color: rgb(116, 185, 255);
         }
 
         @media (min-width: 800px) {
-            .popup_button {
-                margin-right: 30px;
+            main {
+                padding: 80px 15vw;
             }
-        }
 
-
-        @media (max-width: 800px) {
             .portfolio-item {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: row;
+            }
+
+            .portfolio-item-content {
+                text-align: left;
             }
 
             .portfolio-item img {
-                align-self: center;
+                margin: 0% 10%;
+            }
+
+            .popup_button {
+                padding: 20px 30px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            main {
+                padding: 80px 5vw;
+            }
+
+            .portfolio-item {
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+            }
+
+            .portfolio-item-content {
+                text-align: left;
+                margin-left: 10px;
+            }
+
+            .portfolio-item img {
+                text-align: center;
+                margin-bottom: 10px;
             }
 
             .popup_button {
                 align-self: center;
-                margin-bottom: 50px;
             }
         }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+        }
     </style>
+
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo"><img src="bportfolio-img3.png"></a>
+            <a href="index.html" class="logo"><img src="bportfolio-img3.png" alt="Logo"></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
@@ -116,112 +150,124 @@ Paradise<!DOCTYPE html>
                 <h1 class="smm">Social Media Management</h1>
             </div>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>Pet Paradise</h2>
                 <p>March 2019-February 2021</p>
                 <p>Part-time | In-person</p>
             </div>
-            <img src="pet_logo.png">
+            <img src="pet_logo.png" class="circle" alt="Pet Paradise Logo">
             <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>Barstool Sports</h2>
                 <p>January 2020-January 2021</p>
                 <p>Internship | Remote</p>
             </div>
-            <img src="barstool_logo.png">
+            <img src="barstool_logo.png" alt="Barstool Sports Logo">
             <button onclick="openPopup('popup2')" class="popup_button">Learn More</button>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>Crystal Portal</h2>
                 <p>May 2021-September 2021</p>
                 <p>Part-time | In-person</p>
             </div>
-            <img src="crystal_logo.png" class="circle">
+            <img src="crystal_logo.png" class="circle" alt="Crystal Portal Logo">
             <button onclick="openPopup('popup3')" class="popup_button">Learn More</button>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>TLH Downtown</h2>
                 <p>May 2022-Current</p>
                 <p>Contract | In-person</p>
             </div>
-            <img src="tlh_logo.png" class="circle">
+            <img src="tlh_logo.png" class="circle" alt="TLH Downtown Logo">
             <button onclick="openPopup('popup4')" class="popup_button">Learn More</button>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>Olde Fields Clothing</h2>
                 <p>February 2023-August 2023</p>
                 <p>Part-time | In-person</p>
             </div>
-            <img src="olde_logo.png">
+            <img src="olde_logo.png" alt="Olde Fields Clothing Logo">
             <button onclick="openPopup('popup5')" class="popup_button">Learn More</button>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>SkillStorm</h2>
                 <p>January 2023-February 2024</p>
                 <p>Part-time | Remote</p>
             </div>
-            <img src="skillstorm_logo.png">
+            <img src="skillstorm_logo.png" alt="SkillStorm Logo">
             <button onclick="openPopup('popup6')" class="popup_button">Learn More</button>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>RoadTrek</h2>
                 <p>August 2023-February 2024</p>
                 <p>Part-time | Remote</p>
             </div>
-            <img src="roadtrek_logo.png">
+            <img src="roadtrek_logo.png" class="circle" alt="RoadTrek Logo">
             <button onclick="openPopup('popup7')" class="popup_button">Learn More</button>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>EKS Events</h2>
                 <p>February 2024-August 2024</p>
                 <p>Full-time | Remote</p>
             </div>
-            <img src="eks_logo.png">
+            <img src="eks_logo.png" class="circle" alt="EKS Events Logo">
             <button onclick="openPopup('popup8')" class="popup_button">Learn More</button>
         </section>
-         <section class="portfolio-item">
+
+        <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>Joe Mineo Creative</h2>
                 <p>February 2024-August 2024</p>
                 <p>Full-time | Remote</p>
             </div>
-            <img src="joe_logo.png">
+            <img src="joe_logo.png" class="circle" alt="Joe Mineo Creative Logo">
             <button onclick="openPopup('popup9')" class="popup_button">Learn More</button>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>Fox Events</h2>
                 <p>February 2024-August 2024</p>
                 <p>Full-time | Remote</p>
             </div>
-            <img src="afox_logo.png">
+            <img src="afox_logo.png" class="circle" alt="Fox Events Logo">
             <button onclick="openPopup('popup10')" class="popup_button">Learn More</button>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>Soiree Telluride</h2>
                 <p>February 2024-August 2024</p>
                 <p>Full-time | Remote</p>
             </div>
-            <img src="soiree_logo.png">
+            <img src="soiree_logo.png" class="circle" alt="Soiree Telluride Logo">
             <button onclick="openPopup('popup11')" class="popup_button">Learn More</button>
         </section>
+
         <section class="portfolio-item">
             <div class="portfolio-item-content">
                 <h2>Collins Korman Events</h2>
                 <p>February 2024-August 2024</p>
                 <p>Full-time | Remote</p>
             </div>
-            <img src="collins_logo.png">
+            <img src="collins_logo.png" class="circle" alt="Collins Korman Events Logo">
             <button onclick="openPopup('popup12')" class="popup_button">Learn More</button>
         </section>
     </main>
@@ -230,9 +276,9 @@ Paradise<!DOCTYPE html>
             <span class="close" onclick="closePopup('popup1')">&times;</span>
             <h2>Pet Paradise</h2>
             <p>When joining Pet Paradise, I was brought on the team as an Animal Care Specialist. After six months
-                    with the company, our in-house Social Media Manager resigned. I was encouraged to apply, and this is
-                    where my journey with social media marketing began. Through the company's Instagram and Facebook, I
-                    began promoting our brand and highlighting the benefits of boarding your pet with Pet Paradise.</p>
+                with the company, our in-house Social Media Manager resigned. I was encouraged to apply, and this is
+                where my journey with social media marketing began. Through the company's Instagram and Facebook, I
+                began promoting our brand and highlighting the benefits of boarding your pet with Pet Paradise.</p>
         </div>
     </div>
     <div id="popup2" class="popup">
@@ -240,8 +286,8 @@ Paradise<!DOCTYPE html>
             <span class="close" onclick="closePopup('popup2')">&times;</span>
             <h2>barstool Sports</h2>
             <p>Working with Barstool gave me the confidence to scale social media accounts at a rapid rate. After
-                    creating my university's Barstool account on Instagram, I was able to grow the account from zero
-                    followers to over 30k in the first year of management.</p>
+                creating my university's Barstool account on Instagram, I was able to grow the account from zero
+                followers to over 30k in the first year of management.</p>
         </div>
     </div>
     <div id="popup3" class="popup">
@@ -249,8 +295,8 @@ Paradise<!DOCTYPE html>
             <span class="close" onclick="closePopup('popup3')">&times;</span>
             <h2>Crystal Portal</h2>
             <p>Crystal Portal was my first internship position as a Social Media Manager. As this local business had
-                    recently opened, I joined the team to increase our digital presence. This opportunity allowed me
-                    expand my skills primarily through product highlights and e-commerce outreach.</p>
+                recently opened, I joined the team to increase our digital presence. This opportunity allowed me
+                expand my skills primarily through product highlights and e-commerce outreach.</p>
         </div>
     </div>
     <div id="popup4" class="popup">
