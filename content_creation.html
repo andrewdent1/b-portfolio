@@ -7,11 +7,95 @@
     <title>Social Media Management</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        main {
+            padding: 80px 30px 80px 60px;
+        }
+
+        nav {
+            background-color: rgb(116, 185, 255);
+            margin-top: -20px;
+            height: 80px;
+        }
+
+        .smm {
+            font-size: xx-large;
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
+
+        .portfolio-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+        .portfolio-item img {
+            max-width: 200px;
+            margin: 50px 100px;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .portfolio-item-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .portfolio-item-content h2 {
+            margin: 0;
+        }
+
+        .portfolio-item-content p {
+            margin: 10px 0;
+        }
+
+        .popup_button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px 20px;
+            font-weight: 900;
+            color: white;
+            background-color: rgb(0, 128, 255);
+            border: 1px solid black;
+            border-radius: 5%;
+        }
+
+        @media (min-width: 800px) {
+            .popup_button {
+                margin-right: 30px;
+            }
+        }
+
+
+        @media (max-width: 800px) {
+            .portfolio-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .portfolio-item img {
+                align-self: center;
+            }
+
+            .popup_button {
+                align-self: center;
+                margin-bottom: 50px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <nav class="colored_nav">
+        <nav>
             <a href="index.html" class="logo"><img src="bportfolio-img3.png"></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -27,27 +111,45 @@
         </nav>
     </header>
     <main>
-        <section class="portfolio-item">
-            <h2>Crystal Portal</h2>
-            <p>Summary of the portfolio item.</p>
-            <button onclick="openPopup('popup1')">Learn More</button>
+        <section>
+            <div>
+                <h1 class="smm">Social Media Management</h1>
+            </div>
         </section>
         <section class="portfolio-item">
-            <h2>Olde Fields Clothing</h2>
-            <p>Summary of the portfolio item.</p>
-            <button onclick="openPopup('popup1')">Learn More</button>
+            <div class="portfolio-item-content">
+                <h2>Crystal Portal</h2>
+                <p>Crystal Portal was my first internship position as a Social Media Manager. As this local business had
+                    recently opened, I joined the team to increase our digital presence. This opportunity allowed me
+                    expand my skills primarily through product highlights and e-commerce outreach.</p>
+            </div>
+            <img src="crystal_logo.png" class="circle">
+            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
         </section>
         <section class="portfolio-item">
-            <h2>TLH Downtown</h2>
-            <p>Summary of the portfolio item.</p>
-            <button onclick="openPopup('popup1')">Learn More</button>
+            <div class="portfolio-item-content">
+                <h2>TLH Downtown</h2>
+                <p>Summary of the portfolio item.</p>
+            </div>
+            <img src="tlh_logo.png" class="circle">
+            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
         </section>
         <section class="portfolio-item">
-            <h2>Collins Korman</h2>
-            <p>Summary of the portfolio item.</p>
-            <button onclick="openPopup('popup1')">Learn More</button>
+            <div class="portfolio-item-content">
+                <h2>Olde Fields Clothing</h2>
+                <p>Summary of the portfolio item.</p>
+            </div>
+            <img src="olde_logo.png">
+            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
         </section>
-        <!-- Add more portfolio items as needed -->
+        <section class="portfolio-item">
+            <div class="portfolio-item-content">
+                <h2>RoadTrek</h2>
+                <p>Summary of the portfolio item.</p>
+            </div>
+            <img src="roadtrek_logo.png">
+            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
+        </section>
     </main>
     <div id="popup1" class="popup">
         <div class="popup-content">
