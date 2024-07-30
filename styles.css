@@ -194,11 +194,35 @@ nav ul .dropdown:hover .dropdown-content {
 }
 
 .footer {
-    background-color: rgb(116, 185, 255);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
+    background-color: #a0b1ff;
+    padding: 0px;
+    display: flex;
+    align-items: center;
     bottom: 0;
     width: 100%;
+    position: fixed;
+}
+
+.footer .copyright {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.footer .personal-links {
+    flex: 1;
+    text-align: right;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.footer .personal-link-content {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.footer .personal-link-content img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
 }

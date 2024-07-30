@@ -110,7 +110,9 @@
             }
 
             .portfolio-item img {
+                display: flex;
                 text-align: center;
+                justify-content: center;
                 margin-bottom: 10px;
             }
 
@@ -284,7 +286,7 @@
     <div id="popup2" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup('popup2')">&times;</span>
-            <h2>barstool Sports</h2>
+            <h2>Barstool Sports</h2>
             <p>Working with Barstool gave me the confidence to scale social media accounts at a rapid rate. After
                 creating my university's Barstool account on Instagram, I was able to grow the account from zero
                 followers to over 30k in the first year of management.</p>
@@ -363,7 +365,23 @@
         </div>
     </div>
     <div class="footer">
-        &copy; 2024 GrowWithGrace LLC. All rights reserved.
+        <section class="copyright">
+            <div>
+                &copy; 2024 GrowWithGrace LLC
+            </div>
+        </section>
+        <section class="personal-links">
+            <div class="personal-link-content">
+                <a href="https://www.instagram.com/brennaacoheley/" target="_blank">
+                    <img src="instagram_logo.png">
+                </a>
+            </div>
+            <div class="personal-link-content">
+                <a href="https://www.linkedin.com/in/brenna-coheley-607764269/" target="_blank">
+                    <img src="linkedin_logo.png">
+                </a>
+            </div>
+        </section>
     </div>
     <script src="scripts.js"></script>
 </body>

@@ -8,86 +8,98 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        main {
-            padding: 80px 30px 80px 60px;
+        @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+        body {
+            margin-top: 150px;
+            background: #000;
         }
 
-        nav {
-            background-color: rgb(116, 185, 255);
-            margin-top: -20px;
-            height: 80px;
+        .shimmer {
+            font-family: system, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue',
+                'Segoe UI', Arial, sans-serif;
+            font-size: 2.4em;
+            text-align: center;
         }
 
-        .smm {
-            font-size: xx-large;
+        p {
+            font-weight: 300;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.65);
+            width: 500px;
+            text-align: justify;
+            line-height: 1.5em;
+            border-top: 1px dashed rgb(255, 24, 24);
+            margin: 10000px 0 0 5px;
+            padding-top: 1000px;
+        }
+
+        p a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        p a:visted {
+            color: #fff;
+        }
+
+        .shimmer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(to right,
+                    #ed8080 0%,
+                    #2a77d6 16%,
+                    #5eb524 32%,
+                    #eacd25 48%,
+                    #ed8080 64%,
+                    #2a77d6 80%,
+                    #5eb524 100%);
+
+            background-size: 300% 300%;
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-color: #222;
+
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+
+            animation: shimmer infinite 3s linear;
+        }
+
+        .row {
             display: flex;
-            justify-content: center;
-            padding-top: 30px;
+            flex-flow: row wrap;
+            background: #00e1ff;
+            margin: -8px;
         }
 
-        .portfolio-item {
+        .col {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 20px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            flex: 1 0 400px;
+            flex-flow: column;
+            margin: 10px;
+            background: grey;
         }
 
-        .portfolio-item img {
-            max-width: 200px;
-            margin: 50px 100px;
-        }
-
-        .circle {
-            border-radius: 50%;
-        }
-
-        .portfolio-item-content {
+        .card {
             display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .portfolio-item-content h2 {
-            margin: 0;
-        }
-
-        .portfolio-item-content p {
-            margin: 10px 0;
-        }
-
-        .popup_button {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 10px 20px;
-            font-weight: 900;
+            padding: 20px;
+            height: 100%;
+            background: #002732;
             color: white;
-            background-color: rgb(0, 128, 255);
-            border: 1px solid black;
-            border-radius: 5%;
+            opacity: 0.5;
+            align-items: stretch;
+            flex-direction: column;
         }
 
-        @media (min-width: 800px) {
-            .popup_button {
-                margin-right: 30px;
-            }
-        }
-
-
-        @media (max-width: 800px) {
-            .portfolio-item {
-                flex-direction: column;
-                align-items: flex-start;
+        @keyframes shimmer {
+            0% {
+                background-position: top left;
             }
 
-            .portfolio-item img {
-                align-self: center;
-            }
-
-            .popup_button {
-                align-self: center;
-                margin-bottom: 50px;
+            100% {
+                background-position: top right;
             }
         }
     </style>
@@ -110,58 +122,40 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <div>
-                <h1 class="smm">Social Media Management</h1>
+    <h1 class="shimmer">sussy baka</h1>
+    <div class="row">
+
+        <div class='col'>
+            <div class="card">
+                <h3>Prices</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ut corporis totam eos quasi
+                deserunt vitae, unde explicabo, delectus incidunt sit reprehenderit nesciunt quia. Deleniti, labore
+                placeat ex accusamus praesentium.
             </div>
-        </section>
-        <section class="portfolio-item">
-            <div class="portfolio-item-content">
-                <h2>Crystal Portal</h2>
-                <p>Crystal Portal was my first internship position as a Social Media Manager. As this local business had
-                    recently opened, I joined the team to increase our digital presence. This opportunity allowed me
-                    expand my skills primarily through product highlights and e-commerce outreach.</p>
-            </div>
-            <img src="crystal_logo.png" class="circle">
-            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
-        </section>
-        <section class="portfolio-item">
-            <div class="portfolio-item-content">
-                <h2>TLH Downtown</h2>
-                <p>Summary of the portfolio item.</p>
-            </div>
-            <img src="tlh_logo.png" class="circle">
-            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
-        </section>
-        <section class="portfolio-item">
-            <div class="portfolio-item-content">
-                <h2>Olde Fields Clothing</h2>
-                <p>Summary of the portfolio item.</p>
-            </div>
-            <img src="olde_logo.png">
-            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
-        </section>
-        <section class="portfolio-item">
-            <div class="portfolio-item-content">
-                <h2>RoadTrek</h2>
-                <p>Summary of the portfolio item.</p>
-            </div>
-            <img src="roadtrek_logo.png">
-            <button onclick="openPopup('popup1')" class="popup_button">Learn More</button>
-        </section>
-    </main>
-    <div id="popup1" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup('popup1')">&times;</span>
-            <h2>Portfolio Item 1</h2>
-            <p>More information about the portfolio item.</p>
         </div>
-    </div>
-    <div class="footer">
-        &copy; 2024 GrowWithGrace LLC. All rights reserved.
-    </div>
-    <script src="scripts.js"></script>
+
+        <div class='col'>
+            <div class="card">
+                <h3>Prices</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, nulla cumque.<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla et, illum rerum officia perferendis
+                assumenda animi error, fuga ut sunt, perspiciatis id, repudiandae ea nam unde eius possimus dolorem
+                consequatur.<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla et, illum rerum officia perferendis
+                assumenda animi error, fuga ut sunt, perspiciatis id, repudiandae ea nam unde eius possimus dolorem
+                consequatur.
+            </div>
+        </div>
+
+        <div class='col'>
+            <div class="card">
+                <h3>Prices</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla et, illum rerum officia perferendis
+                assumenda animi error, fuga ut sunt.
+            </div>
+        </div>
+
+        </section>
 </body>
 
 </html>
