@@ -13,6 +13,7 @@
         body {
             margin-top: 150px;
             background: #000;
+            margin: 20px;
         }
 
         .shimmer {
@@ -93,6 +94,40 @@
             flex-direction: column;
         }
 
+        .marquee {
+            height: 30px;
+            width: 100%;
+
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee div {
+            display: block;
+            width: 200%;
+            height: 30px;
+
+            position: absolute;
+            overflow: hidden;
+
+            animation: marquee 5s linear infinite;
+        }
+
+        .marquee span {
+            float: left;
+            width: 50%;
+        }
+
+        @keyframes marquee {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+
         @keyframes shimmer {
             0% {
                 background-position: top left;
@@ -156,6 +191,20 @@
         </div>
 
         </section>
+        <div class="marquee">
+            <div>
+                <span>banana banana banana banana banana banana banana banana banana banana banana banana banana banana
+                    banana banana banana banana banana banana banana banana banana banana banana banana banana banana
+                    banana banana banana banana
+                    banana banana banana banana banana banana banana banana banana banana banana banana banana banana
+                    banana banana banana banana
+                    banana banana banana banana banana banana banana banana banana banana banana banana banana banana
+                    banana banana banana banana
+                    banana banana banana banana banana banana banana banana banana banana banana banana banana banana
+                    banana banana banana banana
+                    banana banana banana banana</span>
+            </div>
+        </div>
 </body>
 
 </html>
